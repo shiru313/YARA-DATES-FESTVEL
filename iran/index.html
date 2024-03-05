@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading Screen</title>
+<style>
+  /* CSS for centering the loading GIF */
+  body {
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  img {
+    width: 100%; /* Set image width to 100% of its container */
+    height: auto; /* Maintain aspect ratio */
+  }
+</style>
+</head>
+<body>
+<img src="loading.gif" alt="Loading...">
+
+<script>
+  // JavaScript to redirect after 4 seconds
+  setTimeout(function() {
+    window.location.href = "page.html";
+  }, 3000); // 4000 milliseconds = 4 seconds
+</script>
+</body>
+</html>

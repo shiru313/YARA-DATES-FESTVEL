@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yara Hyper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Remove horizontal scroll */
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.7); /* Adjust the opacity (0.7 in this case) */
+            padding: 0% 0;
+            text-align: center;
+            width: 100%;
+            z-index: 1;
+            position: unset; 
+            transition: background-color 0.3s ease;
+        }
+
+        header img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 50px; /* Adjust margin to move content below the header */
+            transition: margin-top 0.3s ease;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 5;
+            margin: 20px auto;
+            max-width: 600px;
+            position: relative;
+            z-index: 1;
+            padding-left: 10px; /* Add left padding */
+        }
+
+        li {
+            background-color: #fff;
+            margin-bottom: 59px;
+            border-radius: 50px;
+            box-shadow: 0 5px px rgba(0, 0, 0, 0.1);       
+            width: 98%;
+            transition: background-color 0.3s ease;
+            overflow: hidden; /* Hide overflow to hide long text */
+            animation: fadeIn 1s ease; /* Fade in animation */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        li:hover {
+            background-color: #f0f0f0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 10px 0;
+            border-radius: 25px;
+            background-color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        a:hover {
+            background-color: #ccc;
+        }
+
+        /* Video styling */
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted id="video-background">
+        <source src="bg2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <header>
+        <img src="logo.png" alt="Your Shop Logo">
+    </header>
+    <h1>Choose an option</h1>
+    <ul>
+        <li><a href="https://whatsapp.com/channel/0029Va9M8LD7T8bQDkvTPW0d">Offers</a></li>
+        <li><a href="https://www.instagram.com/yarahypertgi?igsh=N2lxaDBoZHVneHIx">Instagram</a></li>
+        <li><a href="https://api.whatsapp.com/send/?phone=%2B919061877772&text&type=phone_number&app_absent=0">Feedback</a></li>
+    </ul>
+</body>
+</html>

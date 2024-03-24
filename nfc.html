@@ -118,6 +118,23 @@
         html {
             scroll-behavior: smooth;
         }
+
+        @keyframes buttonPopup {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Apply animation only to the "Offers" button */
+        .offers-button {
+            animation: buttonPopup 2s infinite; /* Adjust timing as needed */
+        }
     </style>
 </head>
 <body>
@@ -168,7 +185,7 @@
     <h1 id="headline">Touch and Go <p>All Within Fingertip</p></h1>
 
     <ul>
-        <li><a href="https://whatsapp.com/channel/0029Va9M8LD7T8bQDkvTPW0d">Offers</a></li>
+        <li><a href="https://whatsapp.com/channel/0029Va9M8LD7T8bQDkvTPW0d" class="offers-button">Offers</a></li>
         <li><a href="https://www.instagram.com/yarahypertgi?igsh=N2lxaDBoZHVneHIx">Instagram</a></li>
         <li><a href="feedback.html">Feedback</a></li>
     </ul>
@@ -177,7 +194,7 @@
         // Change the content of h1 after 2 seconds
         setTimeout(function() {
             document.getElementById('headline').innerText = 'Everything In One Touch';
-        }, 1700);
+        }, 1800);
     </script>
 
     <script>

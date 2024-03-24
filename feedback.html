@@ -17,8 +17,11 @@
             z-index: 9999;
             animation: fadeIn 0.5s ease; /* Fade-in animation */
         }
+
         .modal-content {
             position: absolute;
+            width: 300px;
+            height: 250px;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -40,13 +43,14 @@
             margin-bottom: 10px;
             transition: transform 0.3s ease; /* Transform animation */
             transform: translateX(-100%); /* Initial position outside the modal */
+            border-radius: 5px;
         }
         .modal button {
-            padding: 5px 10px;
+            padding: 10px 25px;
             background-color: #007bff;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 20px;
             cursor: pointer;
         }
 
@@ -65,7 +69,7 @@
     <!-- Feedback modal -->
     <div id="feedbackModal" class="modal">
         <div class="modal-content">
-            <h2>Feedback Form</h2>
+            <h2>𝘍𝘦𝘦𝘥𝘣𝘢𝘤𝘬 𝘍𝘳𝘰𝘮</h2>
             <label for="name">Your Name:</label>
             <input type="text" id="name" placeholder="Enter your name"><br>
             <label for="feedback">Feedback:</label>

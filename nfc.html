@@ -191,6 +191,16 @@
     </ul>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('video-background');
+
+    // Show buttons after video has loaded
+    video.addEventListener('loadeddata', function() {
+        const buttonList = document.getElementById('buttonList');
+        buttonList.style.display = 'block';
+    });
+});
+        
         // Change the content of h1 after 2 second
         setTimeout(function() {
             document.getElementById('headline').innerText = 'Everything In One Touch';

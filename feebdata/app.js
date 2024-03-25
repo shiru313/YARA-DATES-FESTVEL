@@ -34,7 +34,7 @@ function submitFeedback() {
     document.getElementById('feedback').value = '';
 
     // Show success message or perform other actions
-   //alert('Feedback submitted successfully!');
+   alert('Feedback submitted successfully!');
    window.location.href = 'thanks.html';
   
   

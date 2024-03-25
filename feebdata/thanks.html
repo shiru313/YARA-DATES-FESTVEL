@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perspective!</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #00000a0
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Thanks!</h1>
+        </header>
+        <main>
+            <p id="feedback">Feedback submitted!</p>
+        </main>
+        <footer>
+            <button onclick="goBack()">Go Back</button>
+        </footer>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = 'nfc.html';
+        }
+
+        // Change text after 1 second
+        setTimeout(function() {
+            document.getElementById('feedback').innerText = 'Thank you for visiting our shop!';
+        }, 1500);
+    </script>
+</body>
+</html>

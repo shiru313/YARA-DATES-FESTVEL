@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yara Tirurangadi Customer Feedback </title>
+    <!-- Include Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-database.js"></script>
+    <style>
+        #feedbackList {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #feedbackList li {
+            margin-bottom: 10px;
+            background: #f1f1f1;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        #feedbackList li:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Feedback Data</h1>
+    <ul id="feedbackList"></ul>
+
+    <!-- Initialize Firebase -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBs5HAeKd4BJVe73HNuAUgbMXZsywXlvMk",
+            authDomain: "save-feedback.firebaseapp.com",
+            databaseURL: "https://save-feedback-default-rtdb.firebaseio.com",
+            projectId: "save-feedback",
+            storageBucket: "save-feedback.appspot.com",
+            messagingSenderId: "892913337670",
+            appId: "1:892913337670:web:555b299ff99f7bd79b5147",
+            measurementId: "G-6REBBM5ZE6"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Reference to the database
+        const database = firebase.database();
+
+        // Reference to the feedback data
+        const feedbackRef = database.ref('feedback');
+
+        // Function to display feedback
+        function displayFeedback(data) {
+    const feedbackList = document.getElementById('feedbackList');
+    feedbackList.innerHTML = ''; // Clear previous data
+    data.reverse().forEach((feedbackObj) => {
+        const li = document.createElement('li');
+        const name = document.createElement('div');
+        name.textContent = `𝙉𝙖𝙢𝙚    : ${feedbackObj.name}`;
+        const feedback = document.createElement('div');
+        feedback.textContent = `𝙍𝙚𝙫𝙞𝙚𝙬: ${feedbackObj.feedback}`;
+        const timestamp = document.createElement('div');
+        timestamp.textContent = `𝙏𝙞𝙢𝙚 : ${feedbackObj.timestamp}`;
+        li.appendChild(name);
+        li.appendChild(feedback);
+        li.appendChild(timestamp); // Append timestamp to the feedback item
+        feedbackList.appendChild(li);
+    });
+}
+
+        // Listen for changes in the feedback data
+        feedbackRef.on('value', (snapshot) => {
+            const data = snapshot.val();
+            if (data) {
+                const feedbackArray = Object.values(data);
+                displayFeedback(feedbackArray);
+            }
+        });
+    </script>
+</body>
+</html>
